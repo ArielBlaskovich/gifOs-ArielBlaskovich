@@ -34,6 +34,7 @@ const btnSuggest2 = document.getElementById('btn2');
 const btnSuggest3 = document.getElementById('btn3');
 const favicon = document.getElementById('favicon');
 let themePick = localStorage.getItem('tema') || ('');
+localStorage.setItem('tema', 'day');
 btnBuscar.disabled = true;
 
 
