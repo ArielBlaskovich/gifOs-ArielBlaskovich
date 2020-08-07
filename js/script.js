@@ -34,7 +34,7 @@ const btnSuggest2 = document.getElementById('btn2');
 const btnSuggest3 = document.getElementById('btn3');
 const favicon = document.getElementById('favicon');
 let themePick = localStorage.getItem('tema') || ('');
-localStorage.setItem('tema', 'day');
+
 btnBuscar.disabled = true;
 
 
@@ -320,6 +320,14 @@ function createBlockTags(tag) {
 
 
 // FUNCIONES TEMAS CON LocalStorage
+
+function verifyThemeLocal() {
+    if (themePick == '') {
+        localStorage.setItem('tema', 'day');
+    }
+}
+verifyThemeLocal();
+
 
 function validateThemes() {
     let theme = localStorage.getItem('tema');
